@@ -4,12 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mothusi Molelekng </title>
-    <link rel="stylesheet" href="styles.css">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     
 </head>
 <body>
+<style>
+    body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(pexels-drew-williams-1285451-3483968.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff; 
+}
+
+header {
+  padding: 20px;
+}
+
+
+.user {
+  text-align: center;
+}
+
+.user h1 {
+  margin-bottom: 10px;
+  color: #fff; 
+}
+.th {
+  margin: 2em;
+}
+
+.city,
+.foreignLanguage,
+.favouriteSubjects {
+  margin-top: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+.city h1,
+.foreignLanguage h1,
+.favouriteSubjects h1 {
+  color: #fff;
+  text-transform: uppercase; 
+  font-size: 24px; 
+}
+
+.city img,
+.foreignLanguage img,
+.subject img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  border-radius: 8px; 
+}
+
+.subject-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.subject {
+  width: calc(50% - 20px);
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.subject h2 {
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 18px; 
+}
+
+.subject p {
+  margin-top: 5px;
+  text-align: center;
+  margin-bottom: 0;
+  color: #ddd;
+  font-size: 14px; 
+}
+@media only screen and (max-width: 768px) {
+  .subject {
+      width: calc(100% - 20px);
+  }
+}
+
+</style>
     <header >
     <div class="user" >
      <h1>{{user.fullName}}</h1>
