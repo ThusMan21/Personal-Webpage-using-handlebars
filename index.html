@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mothusi Molelekng </title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+</head>
+<body>
+    <header >
+    <div class="user" >
+     <h1>{{user.fullName}}</h1>
+    <img src ="{{user.photo}}" width="250px"  >
+</div>
+<div class="city" class="borders">
+    <h1>City</h1>
+    <h2>{{city.name}}</h2>
+    <img src="{{city.photo}}" width="400px">
+    <p class="col-6">{{city.description}}</p>
+</div>
+<div class="foreignLanguage"  >
+    <table>
+        <tr>
+            <th colspan="4">Foreign Language</th>
+        </tr>
+        <tr>
+            <td><h2>{{foreignLanguage.language}}</h2></td>
+        </tr>
+        {{#each foreignLanguage.phrases}}
+        <tr>
+            <td>Foreign Language:</td>
+            <td>{{this.foreignLanguage}}</td>
+        </tr>
+        <tr>
+            <td>English phrases:</td>
+            <td>{{this.englishPhrase}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
+
+<div class="favouriteSubjects">
+    <h1>Favorite Subjects</h1>
+    {{#each favouriteSubjects}}
+    <div class="subject">
+        <p>
+            <strong>{{this.name}}</strong><br>
+            {{this.description}}
+         <img src="{{this.photo}}" alt="{{this.name}}" width="300px">   
+        </p>
+    </div>
+    {{/each}}
+</div>
+
+</header>
+<!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
